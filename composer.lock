@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f0904e18baa5cfed08986249e617da4",
+    "content-hash": "ffdd2093ad5c668516a769c63c8b91bc",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.8.3",
+            "version": "5.8.4",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_KEY}&t=5.8.3"
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_KEY}&t=5.8.4"
             },
             "require": {
                 "ffraenz/private-composer-installer": "^2.0"
@@ -139,31 +139,6 @@
                 "zikula"
             ],
             "time": "2019-08-12T15:00:31+00:00"
-        },
-        {
-            "name": "cookpad-baby/simple-seo-pack",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cookpad-baby/simple-seo-pack.git",
-                "reference": "6c950148da9404cd132ca3e234a79406daeb6006"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cookpad-baby/simple-seo-pack/zipball/6c950148da9404cd132ca3e234a79406daeb6006",
-                "reference": "6c950148da9404cd132ca3e234a79406daeb6006",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "description": "TitleやDescription、KeywordなどのMeta情報などを設定するプラグインです",
-            "support": {
-                "source": "https://github.com/cookpad-baby/simple-seo-pack/tree/master",
-                "issues": "https://github.com/cookpad-baby/simple-seo-pack/issues"
-            },
-            "time": "2019-09-03T02:49:28+00:00"
         },
         {
             "name": "ffraenz/private-composer-installer",
@@ -720,22 +695,58 @@
             "homepage": "https://wordpress.org/plugins/amazon-s3-and-cloudfront/"
         },
         {
-            "name": "wpackagist-plugin/breadcrumb-navxt",
-            "version": "6.3.0",
+            "name": "wpackagist-plugin/classic-editor",
+            "version": "1.5",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/breadcrumb-navxt/",
-                "reference": "tags/6.3.0"
+                "url": "https://plugins.svn.wordpress.org/classic-editor/",
+                "reference": "tags/1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/breadcrumb-navxt.6.3.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/breadcrumb-navxt/"
+            "homepage": "https://wordpress.org/plugins/classic-editor/"
+        },
+        {
+            "name": "wpackagist-plugin/contact-form-7",
+            "version": "5.1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
+                "reference": "tags/5.1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.1.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
+            "name": "wpackagist-plugin/contact-form-7-add-confirm",
+            "version": "5.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7-add-confirm/",
+                "reference": "tags/5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7-add-confirm.5.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7-add-confirm/"
         },
         {
             "name": "wpackagist-plugin/custom-post-type-permalinks",
@@ -774,6 +785,24 @@
             "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
         },
         {
+            "name": "wpackagist-plugin/google-apps-login",
+            "version": "3.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-apps-login/",
+                "reference": "tags/3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-apps-login.3.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-apps-login/"
+        },
+        {
             "name": "wpackagist-plugin/google-sitemap-generator",
             "version": "4.1.0",
             "source": {
@@ -790,6 +819,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-sitemap-generator/"
+        },
+        {
+            "name": "wpackagist-plugin/intuitive-custom-post-order",
+            "version": "3.1.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/intuitive-custom-post-order/",
+                "reference": "tags/3.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/intuitive-custom-post-order.3.1.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/intuitive-custom-post-order/"
         },
         {
             "name": "wpackagist-plugin/loginizer",
@@ -826,6 +873,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-importer/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-dashboard-notes",
+            "version": "1.0.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-dashboard-notes/",
+                "reference": "tags/1.0.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-dashboard-notes.1.0.9.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-dashboard-notes/"
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
@@ -1153,7 +1218,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "cookpad-baby/simple-seo-pack": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
