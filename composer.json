@@ -215,8 +215,11 @@
     "wpackagist-plugin/contact-form-7-add-confirm": "*",
     "wpackagist-plugin/custom-post-type-permalinks": "*",
     "wpackagist-plugin/custom-post-type-ui": "*",
+<<<<<<< HEAD
     "wpackagist-plugin/duplicate-post": "*",
     "wpackagist-plugin/google-apps-login": "*",
+=======
+>>>>>>> upstream/master
     "wpackagist-plugin/google-sitemap-generator": "*",
     "wpackagist-plugin/intuitive-custom-post-order": "*",
     "wpackagist-plugin/loginizer": "*",
