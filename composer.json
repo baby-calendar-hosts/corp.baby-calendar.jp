@@ -53,7 +53,7 @@
       "package": {
         "name": "koodimonni-plugin-language/breadcrumb-navxt-ja",
         "type": "wordpress-language",
-        "version": "7.0.2",
+        "version": "7.2.0",
         "dist": {
           "type": "zip",
           "url": "https://downloads.wordpress.org/translation/plugin/breadcrumb-navxt/{%version}/ja.zip",
@@ -92,7 +92,7 @@
       "package": {
         "name": "koodimonni-plugin-language/duplicate-post-ja",
         "type": "wordpress-language",
-        "version": "4.4",
+        "version": "4.5",
         "dist": {
           "type": "zip",
           "url": "https://downloads.wordpress.org/translation/plugin/duplicate-post/{%version}/ja.zip",
@@ -153,19 +153,6 @@
     {
       "type": "package",
       "package": {
-        "name": "koodimonni-plugin-language/contact-form-7-ja",
-        "type": "wordpress-language",
-        "version": "5.1.7",
-        "dist": {
-          "type": "zip",
-          "url": "https://downloads.wordpress.org/translation/plugin/contact-form-7/{%version}/ja.zip",
-          "reference": "master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
         "name": "koodimonni-plugin-language/wp-fastest-cache-ja",
         "type": "wordpress-language",
         "version": "1.1.8",
@@ -192,12 +179,11 @@
   "require": {
     "php": ">=7.4",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
-    "composer/installers": "^2.1",
+    "composer/installers": "^2.2",
     "koodimonni-language/core-ja": "*",
     "koodimonni/composer-dropin-installer": "*",
     "koodimonni-plugin-language/breadcrumb-navxt-ja": "*",
     "koodimonni-plugin-language/classic-editor-ja": "*",
-    "koodimonni-plugin-language/contact-form-7-ja": "*",
     "koodimonni-plugin-language/custom-post-type-ui-ja": "*",
     "koodimonni-plugin-language/duplicate-post-ja": "*",
     "koodimonni-plugin-language/mw-wp-form-ja": "*",
@@ -211,13 +197,12 @@
     "roots/wordpress": "^6.3",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
-    "vlucas/phpdotenv": "^5.4",
+    "vlucas/phpdotenv": "^5.5",
     "wpackagist-plugin/adminimize": "*",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "*",
     "wpackagist-plugin/breadcrumb-navxt": "*",
     "wpackagist-plugin/browser-shots": "*",
     "wpackagist-plugin/classic-editor": "*",
-    "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/custom-post-type-permalinks": "*",
     "wpackagist-plugin/custom-post-type-ui": "*",
     "wpackagist-plugin/duplicate-post": "*",
@@ -239,8 +224,8 @@
     "wpackagist-plugin/xml-sitemap-feed": "*"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master",
-    "squizlabs/php_codesniffer": "^3.6.2"
+    "roave/security-advisories": "dev-latest",
+    "squizlabs/php_codesniffer": "^3.7.1"
   },
   "config": {
     "optimize-autoloader": true,
