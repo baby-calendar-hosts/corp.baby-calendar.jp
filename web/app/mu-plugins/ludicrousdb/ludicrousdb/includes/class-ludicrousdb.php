@@ -3,9 +3,6 @@
 /**
  * LudicrousDB Class
  *
- * Disable this check for the file, since we explicitly overwrite default WP db behavior, so this error is always a false positive in this file
- * phpcs:disable WordPress.DB.RestrictedFunctions
- *
  * @package Plugins/LudicrousDB/Class
  */
 
@@ -47,7 +44,7 @@ class LudicrousDB extends wpdb {
 	/**
 	 * The current MySQL link resource
 	 *
-	 * @var mysqli|resource|false|null
+	 * @var resource
 	 */
 	public $dbh;
 
@@ -436,7 +433,7 @@ class LudicrousDB extends wpdb {
 	 */
 	public function run_callbacks( $group, $args = null ) {
 		if ( ! isset( $this->ludicrous_callbacks[ $group ] ) || ! is_array( $this->ludicrous_callbacks[ $group ] ) ) {
-			return;
+			return null;
 		}
 
 		if ( ! isset( $args ) ) {
@@ -602,9 +599,8 @@ class LudicrousDB extends wpdb {
 			$this->current_host = $this->dbh2host[ $dbhname ];
 
 			// Keep this connection at the top of the stack to prevent disconnecting frequently-used connections
-			$key = array_search( $dbhname, $this->open_connections, true );
-			if ( $key !== false ) {
-				unset( $this->open_connections[ $key ] );
+			if ( $k = array_search( $dbhname, $this->open_connections, true ) ) {
+				unset( $this->open_connections[ $k ] );
 				$this->open_connections[] = $dbhname;
 			}
 
@@ -654,8 +650,7 @@ class LudicrousDB extends wpdb {
 				}
 			}
 
-			$tries_remaining = count( $servers );
-			if ( $tries_remaining === 0  ) {
+			if ( ! $tries_remaining = count( $servers ) ) {
 				return $this->bail( "No database servers were found to match the query. ({$this->table}, {$dataset})" );
 			}
 
@@ -732,7 +727,7 @@ class LudicrousDB extends wpdb {
 					: $this->default_lag_threshold;
 
 				// Check for a lagged slave, if applicable
-				if ( empty( $use_master ) && empty( $write ) && empty( $this->ignore_slave_lag ) && isset( $this->lag_threshold ) && ! isset( $server['host'] ) && ( $lagged_status = $this->get_lag_cache() ) === DB_LAG_BEHIND ) {
+				if ( empty( $use_master ) && empty( $write ) && empty ( $this->ignore_slave_lag ) && isset( $this->lag_threshold ) && ! isset( $server['host'] ) && ( $lagged_status = $this->get_lag_cache() ) === DB_LAG_BEHIND ) {
 
 					// If it is the last lagged slave and it is with the best preference we will ignore its lag
 					if ( ! isset( $unique_lagged_slaves[ $host_and_port ] ) && $this->unique_servers == count( $unique_lagged_slaves ) + 1 && $group == $min_group ) {
@@ -1156,12 +1151,13 @@ class LudicrousDB extends wpdb {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $dbhname Database name.
+	 * @param string $dbhname Dataname key name.
 	 */
 	public function disconnect( $dbhname ) {
-		$key = array_search( $dbhname, $this->open_connections, true );
-		if ( $key !== false ) {
-			unset( $this->open_connections[ $key ] );
+
+		$k = array_search( $dbhname, $this->open_connections, true );
+		if ( ! empty( $k ) ) {
+			unset( $this->open_connections[ $k ] );
 		}
 
 		if ( $this->dbh_type_check( $this->dbhs[ $dbhname ] ) ) {
@@ -1644,7 +1640,7 @@ class LudicrousDB extends wpdb {
 
 				if ( $this->dbh_type_check( $dbh ) ) {
 					if ( true === $this->use_mysqli ) {
-						$client_version = mysqli_get_client_info();
+						$client_version = mysqli_get_client_info( $dbh );
 					} else {
 						$client_version = mysql_get_client_info( $dbh );
 					}
@@ -1750,7 +1746,7 @@ class LudicrousDB extends wpdb {
 	}
 
 	/**
-	 * Check database object type.
+	 * Check databse object type.
 	 *
 	 * @param resource|mysqli $dbh Database resource.
 	 *
